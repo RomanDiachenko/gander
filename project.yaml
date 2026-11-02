@@ -1,0 +1,33 @@
+# Qualinaut: what to test in this project and what to produce.
+version: 1  # the layout of this file; `qlt migrate` upgrades it
+name: "gander"
+
+targets:
+  - id: android  # the native Kotlin app (debug build), on an emulator, driven through Appium
+    platform: android
+    app: app/build/outputs/apk/debug/app-debug.apk  # com.arjun.gander.debug
+    build:
+      command: "chmod +x gradlew && ./gradlew assembleDebug"
+    sandbox:
+      provider: android-emulator
+      avd: qlt-gander
+
+sources:
+  repos: ["."]  # source code: routes, guards, data access
+  docs: []
+  chats: []
+
+oracle:
+  type: requirements
+
+policy: intended
+
+pipeline:
+  goals: [test.results]
+  agents:
+    ui-explorer: {}
+    code-linker: {}
+    test-generator: {}
+  gates: []
+
+flows: {}

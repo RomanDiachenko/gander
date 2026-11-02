@@ -38,3 +38,6 @@ scripts/screenshots/out/
 # compress between versions. Rebuild it with scripts/make-press-kit.sh before
 # uploading docs/press/ to cPanel.
 docs/press/assets/gander-press-kit.zip
+
+# Qualinaut
+.qlt/
