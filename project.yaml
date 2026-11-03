@@ -11,6 +11,9 @@ targets:
     sandbox:
       provider: android-emulator
       avd: qlt-gander
+      # Documents to open: a viewer shows nothing on an empty device
+      files:
+        /sdcard/Download/samples: qa-samples
 
 sources:
   repos: ["."]  # source code: routes, guards, data access
