@@ -263,7 +263,7 @@ ui-explorer:
   # skip: ["^(exit|quit|quit .+|close window)$", "developer tools"]
   # Origins besides the entry URL's that may be visited
   # The system's file picker, where "Open a file" leads, is part of the app's flows
-  allowed_origins: ["android://com.google.android.documentsui"]
+  allowed_origins: ["android://com.android.documentsui", "android://com.google.android.documentsui"]
   # Regexes on request URLs that do not change data
   # ignore_mutations: []
   # How to tell that an action changed data: network = by write requests; submit = form
